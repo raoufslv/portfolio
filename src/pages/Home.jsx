@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const form = useRef();
@@ -11,17 +13,28 @@ const Home = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_c9u7xmt",
+        "template_nh859lc",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "0tpKHe5kk_qrOyDsB"
       )
       .then(
         (result) => {
           console.log(result.text);
+          console.log("email sent");
+          e.target.reset();
+          // show success message
+          toast.success("Message sent successfully", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
         },
         (error) => {
           console.log(error.text);
+          console.log("email not sent");
+          // show error message
+          toast.error("Message not sent", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
         }
       );
   };
@@ -57,25 +70,25 @@ const Home = () => {
 
         <section
           id="Home"
-          className=" w-auto h-screen bg-primary pt-20 px-10 lg:px-20"
+          className=" w-full h-screen bg-primary pt-20 px-5 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-secondary-transparent h-1/2 w-1/6 absolute bottom-44 right-32 lg:block hidden"></div>
-          <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0 "></div>
-          <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10 "></div>
+          <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0  lg:block hidden"></div>
+          <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10  lg:block hidden"></div>
           <div className="bg-secondary-transparent box rounded absolute bottom-1/3 persenolize z-20 lg:block hidden"></div>
           <div className="bg-secondary-transparent h-1/6 w-24 rounded absolute md:block hidden persenolize2"></div>
 
           <div className="mt-20">
             <h2 className="text-xl font-bold">Hello, i'm</h2>
-            <h1 className=" text-9xl font-bold mt-6 flex gap-64 lg:gap-48 xl:gap-64 navbar-font">
+            <h1 className=" text-6xl sm:text-7xl md:text-9xl font-bold mt-6 flex gap-64 lg:gap-48 xl:gap-64 navbar-font">
               <span>Raouf</span>
               <span className="last-name z-10 hidden lg:block lg:text-[4rem] xl:text-[6rem] 2xl:text-9xl min-[1130px]:text-[5rem] lg:pt-10 min-[1130px]:pt-8 xl:pt-6 2xl:pt-0">
                 ABDALLAH
               </span>
             </h1>
-            <h1 className="text-4xl font-bold mt-6">Fullstack Web Developer</h1>
-            <div className="flex gap-20 my-10">
+            <h1 className=" text-2xl sm:text-3xl md:text-4xl font-bold mt-6">Fullstack Web Developer</h1>
+            <div className="flex gap-10 sm:gap-14 md:gap-20 my-10">
               <button
                 className="px-6 py-4 bg-slate-500 rounded text-2xl font-semibold flex gap-4"
                 onClick={() => scrollToSection("#Contact")}
@@ -99,7 +112,7 @@ const Home = () => {
           />
           <img
             src="src/assets/mouse.svg"
-            className=" absolute bottom-0 left-1/2 right-1/2 mb-5"
+            className=" absolute bottom-0 left-1/2 right-1/2 mb-5 md:block hidden"
             alt=""
           />
         </section>
@@ -108,12 +121,12 @@ const Home = () => {
 
         <section
           id="About"
-          className=" w-screen h-screen bg-secondary relative flex gap-72 items-center justify-center px-10 lg:px-20"
+          className=" w-full h-screen bg-secondary relative flex lg:gap-72 items-center justify-center px-5 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-primary h-80 w-1/6 lg:block hidden absolute bottom-96 rounded right-32"></div>
-          <div className="bg-primary-transparent box rounded absolute bottom-0 right-0 "></div>
-          <div className="bg-primary-transparent box rounded absolute bottom-10 right-10 "></div>
+          <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
+          <div className="bg-primary-transparent box rounded absolute bottom-10 right-10  lg:block hidden"></div>
           <div className="bg-primary h-1/4 w-40 left-56 lg:block hidden rounded absolute "></div>
           <div className=" bg-transparent border-4 h-1/3 w-44 lg:block hidden left-40 z-20 top-28 absolute "></div>
 
@@ -122,7 +135,7 @@ const Home = () => {
               <img src="src/assets/raouf.png" className="rounded-xl" alt="" />
             </div>
           </div>
-          <div className=" z-10">
+          <div className=" lg:z-10">
             <h3 className="text-primary text-2xl mb-5 font-semibold">
               About Me
             </h3>
@@ -138,7 +151,7 @@ const Home = () => {
             <h3 className="text-white text-2xl mt-5 font-medium">
               Based in Algiers, Algeria
             </h3>
-            <p className=" w-96 mt-8 text-lg">
+            <p className=" md:w-96  mt-8 text-lg">
               I'm a Fullstack web developer with 2 year of experience in
               designing and building responsive web apps. Proficient in CSS,
               React Js as well as a good experience in Backend with PHP,Nodejs
@@ -162,10 +175,10 @@ const Home = () => {
 
         <section
           id="Skills"
-          className=" w-screen h-screen bg-primary relative flex flex-col lg:flex-row justify-center lg:gap-72 items-center px-10 lg:px-56"
+          className=" w-screen h-screen bg-primary relative flex flex-col lg:flex-row justify-center lg:gap-72 items-center px-5 lg:px-56"
         >
-          <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0 "></div>
-          <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10 "></div>
+          <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0  lg:block hidden"></div>
+          <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10  lg:block hidden"></div>
           <div className="bg-secondary-transparent h-52 w-32 rounded absolute right-52 top-0"></div>
 
           <div
@@ -253,12 +266,12 @@ const Home = () => {
 
         <section
           id="Projects"
-          className=" w-screen h-auto bg-secondary relative px-10 lg:px-20"
+          className=" w-screen h-auto bg-secondary relative px-5 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-primary h-80 w-1/12 absolute top-10 rounded right-10 hidden lg:block"></div>
-          <div className="bg-primary-transparent box rounded absolute bottom-0 right-0 "></div>
-          <div className="bg-primary-transparent box rounded absolute bottom-10 right-10 "></div>
+          <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
+          <div className="bg-primary-transparent box rounded absolute bottom-10 right-10  lg:block hidden"></div>
           <div className="bg-primary h-1/4 w-40 left-40 rounded absolute top-96  hidden lg:block"></div>
           <div className=" bg-transparent border-4 h-1/3 w-44 left-24 z-20 top-48 absolute  hidden lg:block"></div>
 
@@ -320,10 +333,10 @@ const Home = () => {
 
         <section
           id="Resume"
-          className=" w-screen h-auto bg-primary relative flex  justify-center items-center py-10 px-10 lg:px-20"
+          className=" w-screen h-auto bg-primary relative flex  justify-center items-center py-10 px-5 lg:px-20"
         >
-          <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0 "></div>
-          <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10 "></div>
+          <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0  lg:block hidden"></div>
+          <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10  lg:block hidden"></div>
           <div className="bg-secondary-transparent h-52 w-32 rounded absolute right-20 top-10 lg:block hidden"></div>
 
           <div className="bg-secondary h-2 rounded-full absolute right-52 top-0"></div>
@@ -332,28 +345,28 @@ const Home = () => {
               My Resume
             </h3>
             <div className="flex gap-20 items-center mt-10 flex-col lg:flex-row">
-              <div className="self-start mt-5">
+              <div className="lg:self-start lg:mt-5">
                 <div className=" flex items-center gap-3">
                   <hr className="h-1-2 bg-secondary w-5 border-0" />
                   <h4 className="text-2xl navbar-font">Experience</h4>
                 </div>
-                <div className="flex gap-5 my-8">
+                <div className="flex sm:gap-5 gap-2 my-8">
                   <img
                     src="src/assets/education2.svg"
                     className="pb-32"
                     alt="icon"
                   />
                   <div className="">
-                    <div className="flex content-between justify-between">
-                      <h4 className="text-2xl navbar-font">Training Camp</h4>
+                    <div className="flex justify-between">
+                      <h4 className="sm:text-2xl text-xl navbar-font">Training Camp</h4>
                       <h5>December 2022</h5>
                     </div>
                     <div>
-                      <p className=" font-extralight opacity-60 hidden flex-col transform animate-ping ">
+                      <p className=" font-extralight opacity-60 flex-col">
                         Etic club - Ecole supérieure d'informatique
                       </p>
 
-                      <p className="font-extralight opacity-60 mt-3 w-96">
+                      <p className="font-extralight opacity-100 mt-3 md:w-96 w-[17rem]">
                         I worked on a project to "create a web application
                         allowing Algerians to submit their automobile sale
                         announcement and consult those published by other users"
@@ -364,26 +377,26 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="self-start mt-5">
+              <div className="lg:self-start lg:mt-5">
                 <div className=" flex items-center gap-3">
                   <hr className="h-1-2 bg-secondary w-5 border-0" />
-                  <h4 className="text-2xl navbar-font">Education</h4>
+                  <h4 className="sm:text-2xl text-xl navbar-font">Education</h4>
                 </div>
                 <div className=" flex flex-col">
-                  <div className="flex gap-5 my-8">
+                  <div className="flex sm:gap-5 gap-2 my-8">
                     <img
                       src="src/assets/education2.svg"
                       className="self-start mt-2"
                       alt="icon"
                     />
                     <div>
-                      <div className="flex content-between justify-between">
-                        <h4 className="text-2xl navbar-font">
+                      <div className="flex justify-between">
+                        <h4 className="sm:text-2xl text-xl navbar-font">
                           Computer Vision
                         </h4>
                         <h5>2022 - present</h5>
                       </div>
-                      <div className="w-[31.6rem]">
+                      <div className="md:w-[31.6rem] w-[17rem]">
                         <p className=" font-extralight opacity-60">
                           Master's degree - University of Science and Technology
                           Houari Boumediene
@@ -398,20 +411,20 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex gap-5 my-8">
+                  <div className="flex sm:gap-5 gap-2 my-8">
                     <img
                       src="src/assets/education2.svg"
                       className="self-start mt-2"
                       alt="icon"
                     />
                     <div>
-                      <div className="flex content-between justify-between">
-                        <h4 className="text-2xl navbar-font">
+                      <div className="flex justify-between">
+                        <h4 className="sm:text-2xl text-xl navbar-font">
                           Computer Science
                         </h4>
                         <h5>2019 - 2022</h5>
                       </div>
-                      <div className="w-[31.6rem]">
+                      <div className="md:w-[31.6rem] w-[17rem]">
                         <p className=" font-extralight opacity-60">
                           Bachelor's degree - University of Science and
                           Technology Houari Boumediene
@@ -436,17 +449,17 @@ const Home = () => {
 
         <section
           id="Contact"
-          className=" w-screen h-screen bg-secondary relative px-10 lg:px-20"
+          className=" w-screen h-auto bg-secondary relative px-5 lg:px-20 pb-10"
         >
-          <div className="bg-primary-transparent box rounded absolute bottom-0 right-0 "></div>
-          <div className="bg-primary-transparent box rounded absolute bottom-10 right-10 "></div>
+          <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
+          <div className="bg-primary-transparent box rounded absolute bottom-10 right-10  lg:block hidden"></div>
           <div className="bg-primary h-52 w-36 rounded absolute left-5 bottom-16 lg:block hidden"></div>
 
           <div className="flex flex-col gap-5 items-center">
-            <h3 className="text-secondary text-4xl navbar-font pt-10 text-center">
+            <h3 className="text-secondary text-4xl navbar-font pt-10 lg:pb-10 text-center">
               Contact Me
             </h3>
-            <div className=" flex gap-6 flex-col lg:flex-row">
+            <div className=" flex lg:gap-56 gap-10 flex-col lg:flex-row">
               <div>
                 <h4 className=" text-xl lg:block hidden">
                   Please fill out the form on this section <br /> to contact me.
@@ -464,7 +477,7 @@ const Home = () => {
                   <img src="src/assets/message.svg" alt="" />
                   <div>
                     <h4 className=" text-xl">Email me</h4>
-                    <h4 className="text-primary font-bold text-xl">
+                    <h4 className="text-primary font-bold md:text-xl sm:text-lg">
                       abderraouf.abdallah1812@gmail.com
                     </h4>
                   </div>
@@ -472,43 +485,42 @@ const Home = () => {
               </div>
               <div className="flex-grow">
                 <form
-                  className="flex flex-col gap-5 text-black w-96 h-96"
+                  className="flex flex-col gap-5 text-black md:w-96 md:h-96"
                   ref={form}
                   onSubmit={sendEmail}
                 >
-                  <label>Name</label>
                   <input
                     type="text"
                     name="user_name"
                     className="bg-secondary2 rounded-lg p-2"
                     placeholder="Name"
                   />
-                  <label>Email</label>
                   <input
                     type="email"
                     name="user_email"
                     className="bg-secondary2 rounded-lg p-2"
                     placeholder="Email"
                   />
-                  <label>phone</label>
                   <input
                     type="tel"
                     name="user_phone"
                     className="bg-secondary2 rounded-lg p-2"
                     placeholder="Phone Number"
                   />
-                  <label>Message</label>
                   <textarea
                     name="message"
                     className="bg-secondary2 rounded-lg p-2 h-40"
                     placeholder="Message"
                   />
-                  <input
+                  <button
                     type="submit"
                     value="Send"
-                    className="bg-primary rounded-lg p-2 w-28 text-white"
-                  />
+                    className="bg-primary rounded-lg p-2 w-28 text-white cursor-pointer hover:bg-secondary2 hover:text-primary"
+                  >
+                    Send
+                  </button>
                 </form>
+                <ToastContainer />
               </div>
             </div>
           </div>
@@ -518,9 +530,9 @@ const Home = () => {
 
         <section
           id="footer"
-          className="w-screen max-h-screen bg-primary relative py-16 px-10 lg:px-20"
+          className="w-screen max-h-screen bg-primary relative py-16 px-5 lg:px-20"
         >
-          <div className=" bg-transparent border-4 h-64 w-48 left-16 z-20 bottom-14 absolute "></div>
+          <div className=" bg-transparent border-4 md:h-64 h-56 w-44 md:left-16 z-20 md:bottom-14 bottom-12 left-3 absolute "></div>
           <div className="flex justify-between">
             <a href="/" className=" z-50">
               <img src="src/assets/Logowhite.png" alt="" />

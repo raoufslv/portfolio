@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav
       className={classNames(
         scrollPosition > 0 ? "shadow bg-white text-black" : "",
-        "flex justify-between px-10 lg:px-20 py-3 fixed w-full top-0 z-50 transition-colors"
+        "flex justify-between px-5 lg:px-20 py-3 fixed w-full top-0 z-50 transition-colors"
       )}
     >
       <button className="" onClick={() => (window.location.href = "/")}>
