@@ -28,8 +28,8 @@ const Navbar = () => {
         <img
           src={classNames(
             scrollPosition > 0
-              ? "src/assets/Logoprimary.png"
-              : "src/assets/Logowhite.png"
+              ? "public/assets/Logoprimary.png"
+              : "public/assets/Logowhite.png"
           )}
           alt=""
         />
@@ -39,14 +39,14 @@ const Navbar = () => {
           onMouseEnter={(e) =>
             (e.target.src =
               scrollPosition > 0
-                ? "src/assets/humberger-blue.svg"
-                : "src/assets/humberger-white.svg")
+                ? "public/assets/humberger-blue.svg"
+                : "public/assets/humberger-white.svg")
           }
           onMouseLeave={(e) =>
-            (e.target.src = "src/assets/humberger-default.svg")
+            (e.target.src = "public/assets/humberger-default.svg")
           }
           className="cursor-pointer w-16"
-          src="src/assets/humberger-default.svg"
+          src="public/assets/humberger-default.svg"
           alt="humberger-icon"
           onClick={() => setIsNavOpen(!isNavOpen)}
         />

@@ -6,13 +6,13 @@ const EkriEchri = () => {
     <div className=" bg-secondary ">
       <nav className=" p-7 flex justify-between">
         <button className="" onClick={() => (window.location.href = "/")}>
-          <img src="src/assets/Logowhite.png" alt="" />
+          <img src="public/assets/Logowhite.png" alt="" />
         </button>
         <DropdownBtn />
       </nav>
 
       <div className="bg-white flex  justify-center items-center gap-10 m-auto w-fit px-16 py-20 rounded-xl">
-        <img src="src/assets/LogoIcon.svg" className=" w-14" alt="" />
+        <img src="public/assets/LogoIcon.svg" className=" w-14" alt="" />
         <h2 className="text-4xl font-semibold text-blue-900">EKRI & ECHRI</h2>
       </div>
 
@@ -53,7 +53,7 @@ const EkriEchri = () => {
         <section className=" bg-primary py-10">
           <h2 className=" text-white text-4xl text-center py-5">Home Page</h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Home.png"
+            src="public/assets/EKRI&ECHRI pics/Home.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -62,7 +62,7 @@ const EkriEchri = () => {
         <section className=" py-10">
           <h2 className=" text-white text-4xl text-center py-5">Log in Page</h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/LogIn.png"
+            src="public/assets/EKRI&ECHRI pics/LogIn.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -73,7 +73,7 @@ const EkriEchri = () => {
             Sign in Page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/SignIn.png"
+            src="public/assets/EKRI&ECHRI pics/SignIn.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -84,7 +84,7 @@ const EkriEchri = () => {
             Notification Page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Notification.png"
+            src="public/assets/EKRI&ECHRI pics/Notification.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -95,7 +95,7 @@ const EkriEchri = () => {
             Messages Page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Messages.png"
+            src="public/assets/EKRI&ECHRI pics/Messages.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -106,7 +106,7 @@ const EkriEchri = () => {
             Articles page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Annonces.png"
+            src="public/assets/EKRI&ECHRI pics/Annonces.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -117,7 +117,7 @@ const EkriEchri = () => {
             Article page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Annonce.png"
+            src="public/assets/EKRI&ECHRI pics/Annonce.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -128,7 +128,7 @@ const EkriEchri = () => {
             Post Article Page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/deposer Annonce.png"
+            src="public/assets/EKRI&ECHRI pics/deposer Annonce.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -139,7 +139,7 @@ const EkriEchri = () => {
             Modify Article page
           </h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Modifier Annonce.png"
+            src="public/assets/EKRI&ECHRI pics/Modifier Annonce.png"
             className=" py-10 px-60"
             alt=""
           />
@@ -148,7 +148,7 @@ const EkriEchri = () => {
         <section className=" py-10">
           <h2 className=" text-white text-4xl text-center py-5">Admine Page</h2>
           <img
-            src="src/assets/EKRI&ECHRI pics/Admin.png"
+            src="public/assets/EKRI&ECHRI pics/Admin.png"
             className=" py-10 px-60 blur-sm"
             alt=""
           />

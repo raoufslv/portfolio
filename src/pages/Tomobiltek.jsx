@@ -7,13 +7,13 @@ class Tomobiltek extends Component {
       <div className=" bg-secondary ">
         <nav className=" p-7 flex justify-between">
           <button className="" onClick={() => (window.location.href = "/")}>
-            <img src="src/assets/Logowhite.png" alt="" />
+            <img src="public/assets/Logowhite.png" alt="" />
           </button>
           <DropdownBtn />
         </nav>
 
         <div className="bg-purple-600 flex  justify-center items-center gap-10 m-auto w-fit px-16 py-20 rounded-xl">
-          <img src="src/assets/logoTomobiltek.svg" className=" w-20" alt="" />
+          <img src="public/assets/logoTomobiltek.svg" className=" w-20" alt="" />
           <h2 className="text-4xl font-semibold text-white">Tomobiltek</h2>
         </div>
 
@@ -55,7 +55,7 @@ class Tomobiltek extends Component {
           <section className=" bg-primary py-10">
             <h2 className=" text-white text-4xl text-center py-5">Home Page</h2>
             <img
-              src="src/assets/Tomobiltek pics/Home.png"
+              src="public/assets/Tomobiltek pics/Home.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -66,7 +66,7 @@ class Tomobiltek extends Component {
               Log in Page
             </h2>
             <img
-              src="src/assets/Tomobiltek pics/LogIn.png"
+              src="public/assets/Tomobiltek pics/LogIn.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -77,7 +77,7 @@ class Tomobiltek extends Component {
               Sign in Page
             </h2>
             <img
-              src="src/assets/Tomobiltek pics/Signup.png"
+              src="public/assets/Tomobiltek pics/Signup.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -88,7 +88,7 @@ class Tomobiltek extends Component {
               Articles page
             </h2>
             <img
-              src="src/assets/Tomobiltek pics/Annonces.png"
+              src="public/assets/Tomobiltek pics/Annonces.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -99,7 +99,7 @@ class Tomobiltek extends Component {
               Article page
             </h2>
             <img
-              src="src/assets/Tomobiltek pics/Annonce.png"
+              src="public/assets/Tomobiltek pics/Annonce.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -110,7 +110,7 @@ class Tomobiltek extends Component {
               Post Article Page
             </h2>
             <img
-              src="src/assets/Tomobiltek pics/Creer Annonce.png"
+              src="public/assets/Tomobiltek pics/Creer Annonce.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -121,7 +121,7 @@ class Tomobiltek extends Component {
               Information page
             </h2>
             <img
-              src="src/assets/Tomobiltek pics/Mes info.png"
+              src="public/assets/Tomobiltek pics/Mes info.png"
               className=" py-10 px-60"
               alt=""
             />

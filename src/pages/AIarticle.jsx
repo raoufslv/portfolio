@@ -9,7 +9,7 @@ class AIarticle extends Component {
       <div className=" bg-secondary ">
         <nav className=" p-7 flex justify-between">
           <button className="" onClick={() => (window.location.href = "/")}>
-            <img src="src/assets/Logowhite.png" alt="" />
+            <img src="public/assets/Logowhite.png" alt="" />
           </button>
           <DropdownBtn />
           <DropdownComponent />
@@ -17,7 +17,7 @@ class AIarticle extends Component {
         </nav>
 
         <div className="flex justify-center items-center gap-10 m-auto w-fit px-16 py-20 rounded-xl bg-img ">
-          <img src="src/assets/LogoAI.png" className="w-16" alt="" />
+          <img src="public/assets/LogoAI.png" className="w-16" alt="" />
           <h2 className="text-4xl font-bold text-blue-800">AI Article</h2>
         </div>
 
@@ -59,7 +59,7 @@ class AIarticle extends Component {
                   target="_blank"
                   className="text-white font-semibold text-xl flex gap-3"
                 >
-                  <img src="src/assets/go-arrow.svg" className=" w-6" alt="" />
+                  <img src="public/assets/go-arrow.svg" className=" w-6" alt="" />
                   Go to website
                 </a>
               </span>
@@ -71,7 +71,7 @@ class AIarticle extends Component {
           <section className=" bg-primary py-10">
             <h2 className=" text-white text-4xl text-center py-5">Home Page</h2>
             <img
-              src="src/assets/AI pics/Home.png"
+              src="public/assets/AI pics/Home.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -82,7 +82,7 @@ class AIarticle extends Component {
               Articles DropDown menu
             </h2>
             <img
-              src="src/assets/AI pics/Dropdown.png"
+              src="public/assets/AI pics/Dropdown.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -93,7 +93,7 @@ class AIarticle extends Component {
               Machine learning page
             </h2>
             <img
-              src="src/assets/AI pics/Machinlearning.png"
+              src="public/assets/AI pics/Machinlearning.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -104,7 +104,7 @@ class AIarticle extends Component {
               Deep learning Page
             </h2>
             <img
-              src="src/assets/AI pics/deeplearning.png"
+              src="public/assets/AI pics/deeplearning.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -115,7 +115,7 @@ class AIarticle extends Component {
               Computer vision page
             </h2>
             <img
-              src="src/assets/AI pics/ComputerVision.png"
+              src="public/assets/AI pics/ComputerVision.png"
               className=" py-10 px-60"
               alt=""
             />
@@ -124,7 +124,7 @@ class AIarticle extends Component {
           <section className=" py-10">
             <h2 className=" text-white text-4xl text-center py-5">NLP Page</h2>
             <img
-              src="src/assets/AI pics/NLP.png"
+              src="public/assets/AI pics/NLP.png"
               className=" py-10 px-60"
               alt=""
             />
