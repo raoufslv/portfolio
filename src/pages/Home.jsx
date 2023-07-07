@@ -41,7 +41,7 @@ const Home = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "public/assets/cv.pdf"; // Replace with the desired file path
+    link.href = "/assets/cv.pdf"; // Replace with the desired file path
     link.download = "CV.pdf"; // Replace with the desired name of the downloaded file
     link.target = "_blank";
     document.body.appendChild(link);
@@ -94,7 +94,7 @@ const Home = () => {
                 onClick={() => scrollToSection("#Contact")}
               >
                 Contact
-                <img src="public/assets/mail.svg" className=" w-8" alt="sa" />
+                <img src="/assets/mail.svg" className=" w-8" alt="sa" />
               </button>
               <button
                 className="text-xl mb-1 font-medium"
@@ -106,12 +106,12 @@ const Home = () => {
           </div>
 
           <img
-            src="public/assets/raouf2.png"
+            src="/assets/raouf2.png"
             className="w-1/3 hidden lg:block absolute bottom-0 lg:right-64 xl:right-80 z-10"
             alt=""
           />
           <img
-            src="public/assets/mouse.svg"
+            src="/assets/mouse.svg"
             className=" absolute bottom-0 left-1/2 right-1/2 mb-5 md:block hidden"
             alt=""
           />
@@ -132,7 +132,7 @@ const Home = () => {
 
           <div className="z-10 lg:block hidden">
             <div className="bg-black rounded-xl w-56 mb-60 ">
-              <img src="public/assets/raouf.png" className="rounded-xl" alt="" />
+              <img src="/assets/raouf.png" className="rounded-xl" alt="" />
             </div>
           </div>
           <div className=" lg:z-10">
@@ -163,7 +163,7 @@ const Home = () => {
             >
               Download CV
               <img
-                src="public/assets/download.svg"
+                src="/assets/download.svg"
                 className=" w-10"
                 alt="download icon"
               />
@@ -305,7 +305,7 @@ const Home = () => {
             <a href="/EkriEchri">
               <Card
                 Headline={"Ekri&Echri"}
-                PicPath="public/assets/Ekri&Echri.png"
+                PicPath="/assets/Ekri&Echri.png"
                 summary={p1}
               ></Card>
             </a>
@@ -314,7 +314,7 @@ const Home = () => {
               <Card
                 Inverse={true}
                 Headline={"Tomobiltek"}
-                PicPath="public/assets/Tomobiltek.png"
+                PicPath="/assets/Tomobiltek.png"
                 summary={p2}
               ></Card>
             </a>
@@ -322,7 +322,7 @@ const Home = () => {
             <a href="/AIarticle">
               <Card
                 Headline={"A site about AI"}
-                PicPath="public/assets/AI-site.png"
+                PicPath="/assets/AI-site.png"
                 summary={p3}
               ></Card>
             </a>
@@ -352,7 +352,7 @@ const Home = () => {
                 </div>
                 <div className="flex sm:gap-5 gap-2 my-8">
                   <img
-                    src="public/assets/education2.svg"
+                    src="/assets/education2.svg"
                     className="pb-32"
                     alt="icon"
                   />
@@ -385,7 +385,7 @@ const Home = () => {
                 <div className=" flex flex-col">
                   <div className="flex sm:gap-5 gap-2 my-8">
                     <img
-                      src="public/assets/education2.svg"
+                      src="/assets/education2.svg"
                       className="self-start mt-2"
                       alt="icon"
                     />
@@ -413,7 +413,7 @@ const Home = () => {
                   </div>
                   <div className="flex sm:gap-5 gap-2 my-8">
                     <img
-                      src="public/assets/education2.svg"
+                      src="/assets/education2.svg"
                       className="self-start mt-2"
                       alt="icon"
                     />
@@ -465,7 +465,7 @@ const Home = () => {
                   Please fill out the form on this section <br /> to contact me.
                 </h4>
                 <div className="my-5 mt-10 flex gap-5 items-center">
-                  <img src="public/assets/phone.svg" alt="" />
+                  <img src="/assets/phone.svg" alt="" />
                   <div>
                     <h4 className=" text-xl">Call me</h4>
                     <h4 className="text-primary font-bold text-xl">
@@ -474,7 +474,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="my-5 mt-10 flex gap-5 items-center">
-                  <img src="public/assets/message.svg" alt="" />
+                  <img src="/assets/message.svg" alt="" />
                   <div>
                     <h4 className=" text-xl">Email me</h4>
                     <h4 className="text-primary font-bold md:text-xl sm:text-lg">
@@ -535,7 +535,7 @@ const Home = () => {
           <div className=" bg-transparent border-4 md:h-64 h-56 w-44 md:left-16 z-20 md:bottom-14 bottom-12 left-3 absolute "></div>
           <div className="flex justify-between">
             <a href="/" className=" z-50">
-              <img src="public/assets/Logowhite.png" alt="" />
+              <img src="/assets/Logowhite.png" alt="" />
             </a>
 
             <div className=" flex items-center gap-8 flex-col lg:flex-row">
@@ -547,13 +547,13 @@ const Home = () => {
                   href="https://web.facebook.com/raouf.abdou.5855"
                   target="_blank"
                 >
-                  <img src="public/assets/facebook.svg" alt="" />
+                  <img src="/assets/facebook.svg" alt="" />
                 </a>
                 <a href="https://www.linkedin.com/in/raoufslv/" target="_blank">
-                  <img src="public/assets/linkdin.svg" alt="" />
+                  <img src="/assets/linkdin.svg" alt="" />
                 </a>
                 <a href="https://github.com/raoufslv" target="_blank">
-                  <img src="public/assets/github.svg" alt="" />
+                  <img src="/assets/github.svg" alt="" />
                 </a>
               </div>
             </div>
