@@ -87,7 +87,9 @@ const Home = () => {
                 ABDALLAH
               </span>
             </h1>
-            <h1 className=" text-2xl sm:text-3xl md:text-4xl font-bold mt-6">Fullstack Web Developer</h1>
+            <h1 className=" text-2xl sm:text-3xl md:text-4xl font-bold mt-6">
+              Fullstack Web Developer
+            </h1>
             <div className="flex gap-10 sm:gap-14 md:gap-20 my-10">
               <button
                 className="px-6 py-4 bg-slate-500 rounded text-2xl font-semibold flex gap-4"
@@ -322,7 +324,7 @@ const Home = () => {
             <a href="/AIarticle">
               <Card
                 Headline={"A site about AI"}
-                PicPath="/assets/AI-site.png"
+                PicPath="/assets/AI-Site.png"
                 summary={p3}
               ></Card>
             </a>
@@ -358,7 +360,9 @@ const Home = () => {
                   />
                   <div className="">
                     <div className="flex justify-between">
-                      <h4 className="sm:text-2xl text-xl navbar-font">Training Camp</h4>
+                      <h4 className="sm:text-2xl text-xl navbar-font">
+                        Training Camp
+                      </h4>
                       <h5>December 2022</h5>
                     </div>
                     <div>
