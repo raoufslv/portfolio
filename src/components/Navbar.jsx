@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav
       className={classNames(
         scrollPosition > 0 ? "shadow bg-white text-black" : "",
-        "flex justify-between px-5 lg:px-20 py-3 fixed w-full top-0 z-50 transition-colors"
+        "flex justify-between px-5 lg:px-20 py-3 fixed w-full top-0 z-20 transition-colors"
       )}
     >
       <button className="" onClick={() => (window.location.href = "/")}>
@@ -34,6 +34,7 @@ const Navbar = () => {
           alt=""
         />
       </button>
+
       <section className="lg:hidden mobile-hmberger-nav">
         <img
           onMouseEnter={(e) =>
@@ -42,30 +43,41 @@ const Navbar = () => {
                 ? "/assets/humberger-blue.svg"
                 : "/assets/humberger-white.svg")
           }
-          onMouseLeave={(e) =>
-            (e.target.src = "/assets/humberger-default.svg")
-          }
+          onMouseLeave={(e) => (e.target.src = "/assets/humberger-default.svg")}
           className="cursor-pointer w-16"
           src="/assets/humberger-default.svg"
           alt="humberger-icon"
           onClick={() => setIsNavOpen(!isNavOpen)}
         />
         <div
-          className={
-            isNavOpen
-              ? "Animate-humberger-navbar-menu"
-              : "Animate-humberger-navbar-menu-closed"
-          }
+          className={classNames(
+            isNavOpen ? "block" : "hidden",
+            "fixed top-0 left-0 w-screen h-screen  bg-black opacity-20 transition-opacity ease-linear duration-300"
+          )}
+          onClick={() => setIsNavOpen(false)}
+        ></div>
+        <div
+          className={classNames(
+            isNavOpen ? "right-0" : "-right-full",
+            "fixed top-0 w-80 h-screen bg-secondary2 z-50 transition-all ease-linear duration-300"
+          )}
         >
           <ul
             className={classNames(
-              scrollPosition > 0 ? "bg-white" : "bg-secondary2",
-              "flex flex-col items-center gap-16 text-2xl font-bold w-80 h-screen fixed top-0 right-0 z-50 text-primary justify-start pt-14"
+              "flex flex-col items-center gap-16 text-2xl font-bold text-primary justify-start pt-14"
             )}
           >
+            <li>
+              <button
+                className="absolute top-0 right-0 mr-5 mt-5"
+                onClick={() => setIsNavOpen(false)}
+              >
+                <img src="/assets/exit.svg" alt="close-icon" className="w-8" />
+              </button>
+            </li>
             <li
               className={classNames(
-                currentPos >= homePos && currentPos < (aboutPos || Infinity)
+                currentPos >= homePos && currentPos < aboutPos
                   ? "link-active"
                   : "",
                 "navbar-Items"
@@ -83,8 +95,7 @@ const Navbar = () => {
             </li>
             <li
               className={classNames(
-                currentPos >= (aboutPos || -Infinity) &&
-                  currentPos < (skillsPos || Infinity)
+                currentPos >= aboutPos && currentPos < skillsPos
                   ? "link-active"
                   : "",
                 "navbar-Items"
@@ -102,8 +113,7 @@ const Navbar = () => {
             </li>
             <li
               className={classNames(
-                currentPos >= (skillsPos || -Infinity) &&
-                  currentPos < (projectsPos || Infinity)
+                currentPos >= skillsPos && currentPos < projectsPos
                   ? "link-active"
                   : "",
                 "navbar-Items"
@@ -121,8 +131,7 @@ const Navbar = () => {
             </li>
             <li
               className={classNames(
-                currentPos >= (projectsPos || -Infinity) &&
-                  currentPos < (resumePos || Infinity)
+                currentPos >= projectsPos && currentPos < resumePos
                   ? "link-active"
                   : "",
                 "navbar-Items"
@@ -140,8 +149,7 @@ const Navbar = () => {
             </li>
             <li
               className={classNames(
-                currentPos >= (resumePos || -Infinity) &&
-                  currentPos < (contactPos || Infinity)
+                currentPos >= resumePos && currentPos < contactPos
                   ? "link-active"
                   : "",
                 "navbar-Items"
@@ -159,8 +167,7 @@ const Navbar = () => {
             </li>
             <li
               className={classNames(
-                currentPos >= (contactPos || -Infinity) &&
-                  currentPos < contactPos + 514
+                currentPos >= contactPos && currentPos < contactPos + 514
                   ? "link-active"
                   : "",
                 "navbar-Items"
@@ -182,12 +189,11 @@ const Navbar = () => {
           </ul>
         </div>
       </section>
+
       <ul className="gap-20  navbar-font text-xl items-center hidden lg:flex">
         <li
           className={classNames(
-            currentPos >= homePos && currentPos < (aboutPos || Infinity)
-              ? "link-active"
-              : "",
+            currentPos >= homePos && currentPos < aboutPos ? "link-active" : "",
             "navbar-Items"
           )}
         >
@@ -202,8 +208,7 @@ const Navbar = () => {
         </li>
         <li
           className={classNames(
-            currentPos >= (aboutPos || -Infinity) &&
-              currentPos < (skillsPos || Infinity)
+            currentPos >= aboutPos && currentPos < skillsPos
               ? "link-active"
               : "",
             "navbar-Items"
@@ -220,8 +225,7 @@ const Navbar = () => {
         </li>
         <li
           className={classNames(
-            currentPos >= (skillsPos || -Infinity) &&
-              currentPos < (projectsPos || Infinity)
+            currentPos >= skillsPos && currentPos < projectsPos
               ? "link-active"
               : "",
             "navbar-Items"
@@ -238,8 +242,7 @@ const Navbar = () => {
         </li>
         <li
           className={classNames(
-            currentPos >= (projectsPos || -Infinity) &&
-              currentPos < (resumePos || Infinity)
+            currentPos >= projectsPos && currentPos < resumePos
               ? "link-active"
               : "",
             "navbar-Items"
@@ -256,8 +259,7 @@ const Navbar = () => {
         </li>
         <li
           className={classNames(
-            currentPos >= (resumePos || -Infinity) &&
-              currentPos < (contactPos || Infinity)
+            currentPos >= resumePos && currentPos < contactPos
               ? "link-active"
               : "",
             "navbar-Items"
@@ -274,8 +276,7 @@ const Navbar = () => {
         </li>
         <li
           className={classNames(
-            currentPos >= (contactPos || -Infinity) &&
-              currentPos < contactPos + 514
+            currentPos >= contactPos && currentPos < contactPos + 514
               ? "link-active"
               : "",
             "navbar-Items"

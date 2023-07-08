@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ PicPath, Headline, summary, Inverse = false}) => {
   return (
-    <div className={`flex bg-primary gap-10 xl:gap-20 p-5 rounded lg:flex-row flex-col
+    <div className={`flex bg-primary gap-10 p-5 rounded lg:flex-row flex-col
     ${Inverse ? "flex-row-reverse" : "flex-row"}`}>
       <div className="xl:w-1/2">
         <h3 className=" font-semibold text-xl">{Headline}</h3>
@@ -10,8 +10,8 @@ const Card = ({ PicPath, Headline, summary, Inverse = false}) => {
           {summary}
         </p>
       </div>
-      <div>
-        <img src={PicPath} className="xl:w-80 rounded" alt="" />
+      <div className="xl:w-1/2">
+        <img src={PicPath} className="rounded h-full w-full" alt="" />
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ const Home = () => {
     const element = document.querySelector(id);
     const offsetTop = element.offsetTop;
     window.scrollTo({
-      top: offsetTop,
+      top: offsetTop - 80,
       behavior: "smooth",
     });
   };
@@ -281,7 +281,7 @@ const Home = () => {
             <h3 className="text-secondary text-4xl navbar-font pt-10 text-center">
               My Projects
             </h3>
-            <p className="ml-96 pl-10 mt-9  hidden lg:block">
+            <p className="ml-96 mt-9  hidden lg:block">
               I find enjoyment in every phase of the development journey, from
               idea generation and teamwork <br />
               to bringing concepts to life.
@@ -292,15 +292,15 @@ const Home = () => {
             <div className="hidden">
               {
                 (p1 =
-                  "in this project i worked on both fronted and backend, For the front i use Html, css with Bootstrap, Vanilla javascript with JQuery and Ajax, And for the Backend i used PHP.")
+                  "A real estate ads website built with Html, css with Bootstrap, Vanilla javascript with JQuery and Ajax, PHP and Mysql.")
               }
               {
                 (p2 =
-                  "in this project i worked on the fronted side, i used different technologies like react and Tailwind.")
+                  "A web application allowing users to post their car sale ad and consult those published by other users, built with React.")
               }
               {
                 (p3 =
-                  "This is a simple website for an AI Article, implimented using only html and css.")
+                  "A website for an article on AI, built using only html and css.")
               }
             </div>
 
@@ -355,7 +355,7 @@ const Home = () => {
                 <div className="flex sm:gap-5 gap-2 my-8">
                   <img
                     src="/assets/education2.svg"
-                    className="pb-32"
+                    className="self-start mt-2"
                     alt="icon"
                   />
                   <div className="">
@@ -365,12 +365,12 @@ const Home = () => {
                       </h4>
                       <h5>December 2022</h5>
                     </div>
-                    <div>
+                    <div className="md:w-[31.6rem] w-[17rem]">
                       <p className=" font-extralight opacity-60 flex-col">
                         Etic club - Ecole supérieure d'informatique
                       </p>
 
-                      <p className="font-extralight opacity-100 mt-3 md:w-96 w-[17rem]">
+                      <p className="font-extralight opacity-100 mt-3">
                         I worked on a project to "create a web application
                         allowing Algerians to submit their automobile sale
                         announcement and consult those published by other users"
@@ -482,7 +482,7 @@ const Home = () => {
                   <div>
                     <h4 className=" text-xl">Email me</h4>
                     <h4 className="text-primary font-bold md:text-xl sm:text-lg">
-                      abderraouf.abdallah1812@gmail.com
+                    <a href = "mailto: abderraouf.abdallah1812@gmail.com">abderraouf.abdallah1812@gmail.com</a>
                     </h4>
                   </div>
                 </div>
