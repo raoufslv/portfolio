@@ -73,7 +73,11 @@ rgba(255, 255, 255, 0.30)
 }
 
 .text-primary {
-  color: #203647 !important;
+  color: #203647;
+}
+
+.text-secondary {
+  color: #63727e;
 }
 
 .link-active {

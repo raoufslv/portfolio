@@ -64,6 +64,15 @@ const EkriEchri = () => {
                 convenience, communication, and browsing experience while
                 ensuring efficient site management.
               </p>
+              <span className="text-xl ">
+                <a
+                  href="https://ekri-echri.000webhostapp.com/index.php"
+                  target="_blank"
+                  className="text-primary hover:text-white transition duration-200 ease-in-out"
+                >
+                  See the website →
+                </a>
+              </span>
             </div>
           </div>
         </section>

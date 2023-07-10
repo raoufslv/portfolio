@@ -11,6 +11,19 @@ const Home = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // verify the form and its fields
+    if (
+      !form.current.user_name.value ||
+      !form.current.user_email.value ||
+      !form.current.user_phone.value ||
+      !form.current.message.value
+    ) {
+      toast.error("Please fill all the fields", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_c9u7xmt",
@@ -41,7 +54,7 @@ const Home = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/assets/cv.pdf"; // Replace with the desired file path
+    link.href = "/assets/cv2.pdf"; // Replace with the desired file path
     link.download = "CV.pdf"; // Replace with the desired name of the downloaded file
     link.target = "_blank";
     document.body.appendChild(link);
@@ -189,11 +202,11 @@ const Home = () => {
           ></div>
 
           <div>
-            <h3 className="text-secondary text-2xl mb-5 font-semibold">
+            <h3 className=" text-2xl mb-5 font-semibold">
               My Skills
             </h3>
             <br />
-            <h2 className=" text-5xl text-secondary navbar-font font-medium">
+            <h2 className=" text-5xl navbar-font font-medium">
               Brining your vision
               <br />
               to life !
@@ -278,7 +291,7 @@ const Home = () => {
           <div className=" bg-transparent border-4 h-1/3 w-44 left-24 z-20 top-48 absolute  hidden lg:block"></div>
 
           <div>
-            <h3 className="text-secondary text-4xl navbar-font pt-10 text-center">
+            <h3 className="text-4xl navbar-font pt-10 text-center">
               My Projects
             </h3>
             <p className="ml-96 mt-9  hidden lg:block">
@@ -343,7 +356,7 @@ const Home = () => {
 
           <div className="bg-secondary h-2 rounded-full absolute right-52 top-0"></div>
           <div>
-            <h3 className="text-secondary text-4xl navbar-font text-center">
+            <h3 className=" text-4xl navbar-font text-center">
               My Resume
             </h3>
             <div className="flex gap-20 items-center mt-10 flex-col lg:flex-row">
@@ -460,7 +473,7 @@ const Home = () => {
           <div className="bg-primary h-52 w-36 rounded absolute left-5 bottom-16 lg:block hidden"></div>
 
           <div className="flex flex-col gap-5 items-center">
-            <h3 className="text-secondary text-4xl navbar-font pt-10 lg:pb-10 text-center">
+            <h3 className=" text-4xl navbar-font pt-10 lg:pb-10 text-center">
               Contact Me
             </h3>
             <div className=" flex lg:gap-56 gap-10 flex-col lg:flex-row">
@@ -482,7 +495,9 @@ const Home = () => {
                   <div>
                     <h4 className=" text-xl">Email me</h4>
                     <h4 className="text-primary font-bold md:text-xl sm:text-lg">
-                    <a href = "mailto: abderraouf.abdallah1812@gmail.com">abderraouf.abdallah1812@gmail.com</a>
+                      <a href="mailto: abderraouf.abdallah1812@gmail.com">
+                        abderraouf.abdallah1812@gmail.com
+                      </a>
                     </h4>
                   </div>
                 </div>
@@ -496,24 +511,24 @@ const Home = () => {
                   <input
                     type="text"
                     name="user_name"
-                    className="bg-secondary2 rounded-lg p-2"
+                    className="bg-secondary2 rounded-lg p-2 focus:border-slate-700  focus:ring-slate-700"
                     placeholder="Name"
                   />
                   <input
                     type="email"
                     name="user_email"
-                    className="bg-secondary2 rounded-lg p-2"
+                    className="bg-secondary2 rounded-lg p-2 focus:border-slate-700  focus:ring-slate-700"
                     placeholder="Email"
                   />
                   <input
                     type="tel"
                     name="user_phone"
-                    className="bg-secondary2 rounded-lg p-2"
+                    className="bg-secondary2 rounded-lg p-2 focus:border-slate-700  focus:ring-slate-700"
                     placeholder="Phone Number"
                   />
                   <textarea
                     name="message"
-                    className="bg-secondary2 rounded-lg p-2 h-40"
+                    className="bg-secondary2 rounded-lg p-2 h-40 focus:border-slate-700  focus:ring-slate-700"
                     placeholder="Message"
                   />
                   <button
@@ -536,14 +551,14 @@ const Home = () => {
           id="footer"
           className="w-screen max-h-screen bg-primary relative py-16 px-5 lg:px-20"
         >
-          <div className=" bg-transparent border-4 md:h-64 h-56 w-44 md:left-16 z-20 md:bottom-14 bottom-12 left-3 absolute "></div>
-          <div className="flex justify-between">
-            <a href="/" className=" z-50">
+          <div className=" bg-transparent border-4 md:h-64 h-56 w-44 md:left-16 z-20 md:bottom-14 bottom-12 left-3 absolute flex items-end">
+            <a href="/" className="m-2 md:m-1">
               <img src="/assets/Logowhite.png" alt="" />
             </a>
-
+          </div>
+          <div className="flex justify-end">
             <div className=" flex items-center gap-8 flex-col lg:flex-row">
-              <h4 className="text-secondary text-3xl navbar-font">
+              <h4 className=" text-3xl navbar-font">
                 My socials
               </h4>
               <div className="flex gap-5">
