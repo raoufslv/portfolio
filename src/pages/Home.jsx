@@ -4,7 +4,7 @@ import Card from "../components/Card";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Skills from "../components/skills";
+import Skills from "../components/Skills";
 import { motion } from "framer-motion";
 
 const Home = () => {
