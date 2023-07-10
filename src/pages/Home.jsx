@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import { useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Skills from "../components/skills";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const form = useRef();
@@ -75,6 +77,9 @@ const Home = () => {
   let p1 = "";
   let p2 = "";
   let p3 = "";
+
+  // declare 2 variables de type boolean
+  const [AboutHovered, setAboutHovered] = useState(false);
   return (
     <div className="text-white">
       <Navbar />
@@ -83,7 +88,7 @@ const Home = () => {
 
         <section
           id="Home"
-          className=" w-full h-screen bg-primary pt-20 px-5 lg:px-20"
+          className=" w-full h-auto min-h-screen bg-primary pt-20 px-5 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-secondary-transparent h-1/2 w-1/6 absolute bottom-44 right-32 lg:block hidden"></div>
@@ -104,18 +109,33 @@ const Home = () => {
               Fullstack Web Developer
             </h1>
             <div className="flex gap-10 sm:gap-14 md:gap-20 my-10">
-              <button
-                className="px-6 py-4 bg-slate-500 rounded text-2xl font-semibold flex gap-4"
+              <motion.button
+                className="px-6 py-4 bg-slate-500 rounded text-2xl font-semibold flex gap-4 hover:bg-slate-600"
                 onClick={() => scrollToSection("#Contact")}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+                
               >
                 Contact
                 <img src="/assets/mail.svg" className=" w-8" alt="sa" />
-              </button>
+              </motion.button>
               <button
                 className="text-xl mb-1 font-medium"
                 onClick={() => scrollToSection("#About")}
+                onMouseEnter={() => setAboutHovered(true)}
+                onMouseLeave={() => setAboutHovered(false)}
               >
                 About Me
+                <motion.div
+                  initial={{ scaleX: 0, originX: 0.5 }}
+                  animate={{
+                    scaleX: AboutHovered ? 1 : 0,
+                  }}
+                  exit={{ scaleX: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="h-1 bg-white rounded mt-[0.2rem]"
+                />
               </button>
             </div>
           </div>
@@ -125,18 +145,21 @@ const Home = () => {
             className="w-1/3 hidden lg:block absolute bottom-0 lg:right-64 xl:right-80 z-10"
             alt=""
           />
-          <img
-            src="/assets/mouse.svg"
-            className=" absolute bottom-0 left-1/2 right-1/2 mb-5 md:block hidden"
-            alt=""
-          />
+          <div
+            class="scroll-downs cursor-pointer z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 hidden lg:block"
+            onClick={() => scrollToSection("#About")}
+          >
+            <div class="mousey">
+              <div class="scroller"></div>
+            </div>
+          </div>
         </section>
 
         {/* ***************************************************************** About SECTION ********************************************************************** */}
 
         <section
           id="About"
-          className=" w-full h-screen bg-secondary relative flex lg:gap-72 items-center justify-center px-5 lg:px-20"
+          className=" w-full h-auto min-h-screen py-24 bg-secondary relative flex lg:gap-72 items-center justify-center px-5 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-primary h-80 w-1/6 lg:block hidden absolute bottom-96 rounded right-32"></div>
@@ -190,11 +213,11 @@ const Home = () => {
 
         <section
           id="Skills"
-          className=" w-screen h-screen bg-primary relative flex flex-col lg:flex-row justify-center lg:gap-72 items-center px-5 lg:px-56"
+          className=" w-screen h-auto min-h-screen py-32 bg-primary relative flex flex-col lg:flex-row justify-center lg:gap-72 items-center px-5 lg:px-44"
         >
           <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0  lg:block hidden"></div>
           <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10  lg:block hidden"></div>
-          <div className="bg-secondary-transparent h-52 w-32 rounded absolute right-52 top-0"></div>
+          <div className="bg-secondary-transparent h-56 w-32 rounded-b absolute left-24 top-0"></div>
 
           <div
             className="bg-secondary  h-2 rounded-full absolute right-52 top-0
@@ -202,9 +225,7 @@ const Home = () => {
           ></div>
 
           <div>
-            <h3 className=" text-2xl mb-5 font-semibold">
-              My Skills
-            </h3>
+            <h3 className=" text-2xl mb-5 font-semibold">My Skills</h3>
             <br />
             <h2 className=" text-5xl navbar-font font-medium">
               Brining your vision
@@ -220,68 +241,14 @@ const Home = () => {
             </p>
           </div>
 
-          <div className=" flex flex-col lg:flex-grow">
-            <div className=" relative">
-              <div className=" flex justify-between">
-                <h4>Website Design (Figma)</h4>
-                <h4>65%</h4>
-              </div>
-
-              <div className="bg-secondary  h-2 w-full rounded-full mt-2 absolute top-6"></div>
-              <div className="bg-white  h-2 w-[65%] rounded-full mt-2 absolute top-6"></div>
-            </div>
-
-            <br />
-            <br />
-
-            <div className=" relative">
-              <div className=" flex justify-between">
-                <h4>
-                  Frontend (HTML, CSS, Bootstrap, Tailwind, <br /> JavaScript,
-                  JQuery, Ajax, React)
-                </h4>
-
-                <h4 className=" mt-5">80%</h4>
-              </div>
-
-              <div className="bg-secondary  h-2 w-full rounded-full mt-2 absolute top-12"></div>
-              <div className="bg-white  h-2 w-[80%] rounded-full mt-2 absolute top-12"></div>
-            </div>
-
-            <br />
-            <br />
-
-            <div className=" relative">
-              <div className=" flex justify-between">
-                <h4>
-                  Backend (PHP, Nodejs, Nextjs, MySQL, <br />
-                  MongoDB, Websocket)
-                </h4>
-                <h4 className=" mt-5">75%</h4>
-              </div>
-              <div className="bg-secondary  h-2 w-full rounded-full mt-2 absolute top-12"></div>
-              <div className="bg-white  h-2 w-[75%] rounded-full mt-2 absolute top-12"></div>
-            </div>
-
-            <br />
-            <br />
-
-            <div className=" relative">
-              <div className=" flex justify-between">
-                <h4>Project Management (Git)</h4>
-                <h4>65%</h4>
-              </div>
-              <div className="bg-secondary  h-2 w-full rounded-full mt-2 absolute top-6"></div>
-              <div className="bg-white  h-2 w-[65%] rounded-full mt-2 absolute top-6"></div>
-            </div>
-          </div>
+          <Skills />
         </section>
 
         {/* ***************************************************************** Projects SECTION ********************************************************************** */}
 
         <section
           id="Projects"
-          className=" w-screen h-auto bg-secondary relative px-5 lg:px-20"
+          className=" w-screen h-auto min-h-screen bg-secondary relative px-5 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-primary h-80 w-1/12 absolute top-10 rounded right-10 hidden lg:block"></div>
@@ -348,7 +315,7 @@ const Home = () => {
 
         <section
           id="Resume"
-          className=" w-screen h-auto bg-primary relative flex  justify-center items-center py-10 px-5 lg:px-20"
+          className=" w-screen h-auto min-h-screen bg-primary relative flex  justify-center items-center py-10 px-5 lg:px-20"
         >
           <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0  lg:block hidden"></div>
           <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10  lg:block hidden"></div>
@@ -356,9 +323,7 @@ const Home = () => {
 
           <div className="bg-secondary h-2 rounded-full absolute right-52 top-0"></div>
           <div>
-            <h3 className=" text-4xl navbar-font text-center">
-              My Resume
-            </h3>
+            <h3 className=" text-4xl navbar-font text-center">My Resume</h3>
             <div className="flex gap-20 items-center mt-10 flex-col lg:flex-row">
               <div className="lg:self-start lg:mt-5">
                 <div className=" flex items-center gap-3">
@@ -466,7 +431,7 @@ const Home = () => {
 
         <section
           id="Contact"
-          className=" w-screen h-auto bg-secondary relative px-5 lg:px-20 pb-10"
+          className=" w-screen h-auto min-h-screen bg-secondary relative px-5 lg:px-20 pb-10"
         >
           <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
           <div className="bg-primary-transparent box rounded absolute bottom-10 right-10  lg:block hidden"></div>
@@ -558,9 +523,7 @@ const Home = () => {
           </div>
           <div className="flex justify-end">
             <div className=" flex items-center gap-8 flex-col lg:flex-row">
-              <h4 className=" text-3xl navbar-font">
-                My socials
-              </h4>
+              <h4 className=" text-3xl navbar-font">My socials</h4>
               <div className="flex gap-5">
                 <a
                   href="https://web.facebook.com/raouf.abdou.5855"
