@@ -17,7 +17,8 @@ const Card = (props) => {
       <h3 className="font-semibold text-xl">{props.info.title}</h3>
       <p className="mt-3 text-md font-light">{props.info.description}</p>
       <Link
-        to={`/project/${props.index}`} // Pass the project index as a parameter
+        to={`/project/${props.index}`}
+        onClick={() => window.scrollTo(0, 0)}
         className="text-secondary cursor-pointer hover:text-white transition duration-200 ease-in-out self-end"
       >
         see details →
