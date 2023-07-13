@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Skills from "../components/Skills";
 import { motion } from "framer-motion";
+import projects from "../settings/projects.js";
 
 const Home = () => {
   const form = useRef();
@@ -73,11 +74,6 @@ const Home = () => {
     });
   };
 
-  // declare 3 variables de type string
-  let p1 = "";
-  let p2 = "";
-  let p3 = "";
-
   // declare 2 variables de type boolean
   const [AboutHovered, setAboutHovered] = useState(false);
   return (
@@ -115,7 +111,6 @@ const Home = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2 }}
-                
               >
                 Contact
                 <img src="/assets/mail.svg" className=" w-8" alt="sa" />
@@ -146,11 +141,11 @@ const Home = () => {
             alt=""
           />
           <div
-            class="scroll-downs cursor-pointer z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 hidden lg:block"
+            className="scroll-downs cursor-pointer z-10 absolute bottom-0 left-1/2 transform -translate-x-1/2 hidden lg:block"
             onClick={() => scrollToSection("#About")}
           >
-            <div class="mousey">
-              <div class="scroller"></div>
+            <div className="mousey">
+              <div className="scroller"></div>
             </div>
           </div>
         </section>
@@ -248,66 +243,26 @@ const Home = () => {
 
         <section
           id="Projects"
-          className=" w-screen h-auto min-h-screen bg-secondary relative px-5 lg:px-20"
+          className=" w-screen h-auto min-h-screen bg-secondary relative p-5 lg:px-20"
         >
           {/* boxes */}
-          <div className="bg-primary h-80 w-1/12 absolute top-10 rounded right-10 hidden lg:block"></div>
           <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
           <div className="bg-primary-transparent box rounded absolute bottom-10 right-10  lg:block hidden"></div>
-          <div className="bg-primary h-1/4 w-40 left-40 rounded absolute top-96  hidden lg:block"></div>
-          <div className=" bg-transparent border-4 h-1/3 w-44 left-24 z-20 top-48 absolute  hidden lg:block"></div>
 
           <div>
             <h3 className="text-4xl navbar-font pt-10 text-center">
               My Projects
             </h3>
-            <p className="ml-96 mt-9  hidden lg:block">
+            <p className="text-center mt-5">
               I find enjoyment in every phase of the development journey, from
-              idea generation and teamwork <br />
-              to bringing concepts to life.
+              idea generation and teamwork to bringing concepts to life.
             </p>
           </div>
 
-          <div className="flex flex-col mx-10 sm:mx-20 md:mx-40 lg:mx-96 gap-5 py-14">
-            <div className="hidden">
-              {
-                (p1 =
-                  "A real estate ads website built with Html, css with Bootstrap, Vanilla javascript with JQuery and Ajax, PHP and Mysql.")
-              }
-              {
-                (p2 =
-                  "A web application allowing users to post their car sale ad and consult those published by other users, built with React.")
-              }
-              {
-                (p3 =
-                  "A website for an article on AI, built using only html and css.")
-              }
-            </div>
-
-            <a href="/EkriEchri">
-              <Card
-                Headline={"Ekri&Echri"}
-                PicPath="/assets/Ekri&Echri.png"
-                summary={p1}
-              ></Card>
-            </a>
-
-            <a href="/Tomobiltek">
-              <Card
-                Inverse={true}
-                Headline={"Tomobiltek"}
-                PicPath="/assets/Tomobiltek.png"
-                summary={p2}
-              ></Card>
-            </a>
-
-            <a href="/AIarticle">
-              <Card
-                Headline={"A site about AI"}
-                PicPath="/assets/AI-Site.png"
-                summary={p3}
-              ></Card>
-            </a>
+          <div className="flex gap-10 items-center justify-center mt-10 flex-wrap">
+            {projects.map((project, index) => (
+              <Card key={index} info={project} index={index} /> // Pass the index prop
+            ))}
           </div>
         </section>
 

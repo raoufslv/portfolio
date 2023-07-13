@@ -1,21 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ PicPath, Headline, summary, Inverse = false}) => {
+const Card = (props) => {
+  const { index } = props; // Extract the index from props
   return (
-    <div className={`flex bg-primary gap-10 p-5 rounded lg:flex-row flex-col
-    ${Inverse ? "flex-row-reverse" : "flex-row"}`}>
-      <div className="xl:w-1/2 relative">
-        <h3 className=" font-semibold text-xl">{Headline}</h3>
-        <p className=" mt-5">
-          {summary}
-        </p>
-        <span className=" text-secondary  right-0 bottom-0 absolute hover:text-white transition duration-200 ease-in-out">
-            see details →
-        </span>
+    <div
+      className={`flex bg-primary gap-1 p-5 rounded flex-col relative w-[20rem]`}
+    >
+      <div className="">
+        <img
+          src={props.info.image}
+          className="rounded w-[17.5rem] h-full"
+          alt=""
+        />
       </div>
-      <div className="xl:w-1/2">
-        <img src={PicPath} className="rounded h-full w-full" alt="" />
-      </div>
+      <h3 className="font-semibold text-xl">{props.info.title}</h3>
+      <p className="mt-3 text-md font-light">{props.info.description}</p>
+      <Link
+        to={`/project/${props.index}`} // Pass the project index as a parameter
+        className="text-secondary cursor-pointer hover:text-white transition duration-200 ease-in-out self-end"
+      >
+        see details →
+      </Link>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import icons from "../settings/icons.js";
+import icons from "../settings/skillsIcons.js";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Listicons({ selected }) {

@@ -20,60 +20,39 @@ const EkriEchri = () => {
         </div>
 
         <section className="pb-16">
-          <h2 className=" text-white text-4xl mt-10">EKRI & ECHRI</h2>
+          <h2 className=" text-white text-3xl mt-10">EKRI & ECHRI</h2>
           <hr className="my-2" />
+          <div className=" relative">
+            <h3
+              className=" text-primary text-xl underline absolute right-0
+             hover:text-white transition duration-200 ease-in-out cursor-pointer"
+            >
+              see Live demo 🡥
+            </h3>
+          </div>
 
-          <div className=" flex lg:flex-row flex-col">
-            <table className="lg:flex-shrink-0 text-left">
-              <tbody>
-                <tr className="text-white text-xl">
-                  <th className="font-semibold lg:pr-20 py-5 w-[40%]">
-                    Categorie :
-                  </th>
-                  <th className="font-normal lg:pr-20 py-5">Dynamic Website</th>
-                </tr>
-                <tr className="text-white text-xl">
-                  <th className="font-semibold lg:pr-20 py-5">Année :</th>
-                  <th className="font-normal lg:pr-20 py-5">2022</th>
-                </tr>
-                <tr className="text-white text-xl">
-                  <th className="font-semibold lg:pr-20 py-5">Equipe :</th>
-                  <th className="font-normal lg:pr-20 py-5">
-                    Raouf ABDALLAH & Issam HANAGRIA
-                  </th>
-                </tr>
-                <tr className="text-white text-xl">
-                  <th className="font-semibold lg:pr-20 py-5">Client :</th>
-                  <th className="font-normal lg:pr-20 py-5">
-                    graduation project
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-            <div className="text-white  lg:w-1/2">
-              <h1 className="text-2xl py-5 font-semibold">Details :</h1>
-              <p className="text-xl">
-                The EKRI & ECHRI project involves the development of a housing
-                advertisement website using HTML, CSS Bootstrap, JavaScript,
-                JQuery, Ajax, WebSocket, PHP, and MySQL. The website aims to
-                provide a responsive user-friendly platform for individuals to
-                advertise and search for housing options. It incorporates
-                features such as user sign-in with Google API, real-time
-                messaging and notifications, Google Maps integration, and an
-                admin manager module. The project aims to enhance user
-                convenience, communication, and browsing experience while
-                ensuring efficient site management.
-              </p>
-              <span className="text-xl ">
-                <a
-                  href="https://ekri-echri.000webhostapp.com/index.php"
-                  target="_blank"
-                  className="text-primary hover:text-white transition duration-200 ease-in-out"
-                >
-                  See the website →
-                </a>
-              </span>
+          <div className="mt-6">
+            <h3 className=" text-white text-xl mt-10">Technologies used:</h3>
+            <div className=" flex flex-wrap gap-5 mt-5">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className=" w-16" alt="" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" className=" w-16" alt="" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" className=" w-16" alt="" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className=" w-16" alt="" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg" className=" w-16" alt="" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" className=" w-16" alt="" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" className=" w-16" alt="" />
             </div>
+          </div>
+          <div className="mt-16">
+            <h3 className=" text-white text-xl mt-10">Features:</h3>
+            <ul className=" text-primary mt-5 list-disc list-inside pl-10 text-lg">
+              <li>Sign in / Log in with email verification plus the ability to sign in with google (using Google API)</li>
+              <li>Post / Modify / Like / Report articles</li>
+              <li>Implementing and using Google map API to show the location of the article</li>
+              <li>Implementing real-time messages between users with web socket.</li>
+              <li>Implementing real-time system notifications</li>
+              <li>Implementing admin manager of the site.</li>
+            </ul>
           </div>
         </section>
       </div>
