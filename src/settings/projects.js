@@ -10,11 +10,11 @@ export const projects = [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
         ],
         features: [
             "Sign in / Log in with email verification plus the ability to sign in with google (using Google API)",
