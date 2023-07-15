@@ -16,7 +16,12 @@ export default function Skills() {
 
   return (
     <div className="flex flex-col lg:flex-grow gap-10 justify-between">
-      <div className="flex gap-6 flex-wrap text-xl">
+      <motion.div
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="flex gap-6 flex-wrap text-xl"
+      >
         <button
           className={classNames(
             isSelected === "Web dev"
@@ -31,7 +36,12 @@ export default function Skills() {
           Web dev
           <motion.div
             initial={{ scaleX: 0, originX: 0.5 }}
-            animate={{ scaleX: isSelected === "Web dev" || hoveredSection === "Web dev" ? 1 : 0 }}
+            animate={{
+              scaleX:
+                isSelected === "Web dev" || hoveredSection === "Web dev"
+                  ? 1
+                  : 0,
+            }}
             exit={{ scaleX: 0 }}
             transition={{ duration: 0.4 }}
             className="h-1 bg-white rounded mt-[0.2rem]"
@@ -51,7 +61,13 @@ export default function Skills() {
           Programmation
           <motion.div
             initial={{ scaleX: 0, originX: 0.5 }}
-            animate={{ scaleX: isSelected === "Programmation" || hoveredSection === "Programmation" ? 1 : 0 }}
+            animate={{
+              scaleX:
+                isSelected === "Programmation" ||
+                hoveredSection === "Programmation"
+                  ? 1
+                  : 0,
+            }}
             exit={{ scaleX: 0 }}
             transition={{ duration: 0.4 }}
             className="h-1 bg-white rounded mt-[0.2rem]"
@@ -71,7 +87,13 @@ export default function Skills() {
           Machine learning
           <motion.div
             initial={{ scaleX: 0, originX: 0.5 }}
-            animate={{ scaleX: isSelected === "Machine learning" || hoveredSection === "Machine learning" ? 1 : 0 }}
+            animate={{
+              scaleX:
+                isSelected === "Machine learning" ||
+                hoveredSection === "Machine learning"
+                  ? 1
+                  : 0,
+            }}
             exit={{ scaleX: 0 }}
             transition={{ duration: 0.4 }}
             className="h-1 bg-white rounded mt-[0.2rem]"
@@ -91,7 +113,12 @@ export default function Skills() {
           Databases
           <motion.div
             initial={{ scaleX: 0, originX: 0.5 }}
-            animate={{ scaleX: isSelected === "Databases" || hoveredSection === "Databases" ? 1 : 0 }}
+            animate={{
+              scaleX:
+                isSelected === "Databases" || hoveredSection === "Databases"
+                  ? 1
+                  : 0,
+            }}
             exit={{ scaleX: 0 }}
             transition={{ duration: 0.4 }}
             className="h-1 bg-white rounded mt-[0.2rem]"
@@ -111,13 +138,16 @@ export default function Skills() {
           Tools
           <motion.div
             initial={{ scaleX: 0, originX: 0.5 }}
-            animate={{ scaleX: isSelected === "Tools" || hoveredSection === "Tools" ? 1 : 0 }}
+            animate={{
+              scaleX:
+                isSelected === "Tools" || hoveredSection === "Tools" ? 1 : 0,
+            }}
             exit={{ scaleX: 0 }}
             transition={{ duration: 0.4 }}
             className="h-1 bg-white rounded mt-[0.2rem]"
           />
         </button>
-      </div>
+      </motion.div>
       <div>
         <Listicons selected={isSelected} />
       </div>

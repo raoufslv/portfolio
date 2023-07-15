@@ -27,12 +27,12 @@ export default function Listicons({ selected }) {
               src={icon}
               className="w-20 cursor-pointer"
               alt="icon"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
+              initial={{ x: 300, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
               exit={{ x: 100, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              whileHover={{ scale: 1.2 }
-              }
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
             />
           ))}
         </motion.div>

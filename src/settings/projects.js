@@ -73,7 +73,7 @@ export const projects = [
         image: "/assets/AI-Site.png",
         logo : "/assets/LogoAI.png",
         bg : "bg-white text-blue-800",
-        link: "https://ai-article.netlify.app/",
+        link: "https://raoufslv.github.io/AI-Article/",
         technologies: [
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",

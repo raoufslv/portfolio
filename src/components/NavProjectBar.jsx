@@ -26,7 +26,7 @@ export default function NavProjectBar({ projects, currentProject }) {
   return (
     <nav
       className={classNames(
-        scrollPosition > 0 ? "shadow bg-white text-black" : "",
+        scrollPosition > 0 ? "shadow bg-opacity-70 bg-white text-black" : "",
         "flex justify-between px-5 lg:px-20 py-3 fixed w-full top-0 z-50 transition-colors"
       )}
     >

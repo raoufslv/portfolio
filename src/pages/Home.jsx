@@ -96,10 +96,21 @@ const Home = () => {
           <div className="mt-20">
             <h2 className="text-xl font-bold">Hello, i'm</h2>
             <h1 className=" text-6xl sm:text-7xl md:text-9xl font-bold mt-6 flex gap-64 lg:gap-48 xl:gap-64 navbar-font">
-              <span>Raouf</span>
-              <span className="last-name z-10 hidden lg:block lg:text-[4rem] xl:text-[6rem] 2xl:text-9xl min-[1130px]:text-[5rem] lg:pt-10 min-[1130px]:pt-8 xl:pt-6 2xl:pt-0">
+              <motion.span
+                initial={{ x: -200, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Raouf
+              </motion.span>
+              <motion.span
+                initial={{ x: 200, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="last-name z-10 hidden lg:block lg:text-[4rem] xl:text-[6rem] 2xl:text-9xl min-[1130px]:text-[5rem] lg:pt-10 min-[1130px]:pt-8 xl:pt-6 2xl:pt-0"
+              >
                 ABDALLAH
-              </span>
+              </motion.span>
             </h1>
             <h1 className=" text-2xl sm:text-3xl md:text-4xl font-bold mt-6">
               Fullstack Web Developer
@@ -135,7 +146,10 @@ const Home = () => {
             </div>
           </div>
 
-          <img
+          <motion.img
+            initial={{ y: 200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
             src="/assets/raouf2.png"
             className="w-1/3 hidden lg:block absolute bottom-0 lg:right-64 xl:right-80 z-10"
             alt=""
@@ -160,15 +174,35 @@ const Home = () => {
           <div className="bg-primary h-80 w-1/6 lg:block hidden absolute bottom-96 rounded right-32"></div>
           <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
           <div className="bg-primary-transparent box rounded absolute bottom-10 right-10  lg:block hidden"></div>
-          <div className="bg-primary h-1/4 w-40 left-56 lg:block hidden rounded absolute "></div>
-          <div className=" bg-transparent border-4 h-1/3 w-44 lg:block hidden left-40 z-20 top-28 absolute "></div>
+          <motion.div
+            initial={{ x: -200, y: 250, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className="bg-primary h-1/4 w-40 left-56 lg:block hidden rounded absolute "
+          ></motion.div>
+          <motion.div
+            initial={{ x: -200, y: -150, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            className=" bg-transparent border-4 h-1/3 w-44 lg:block hidden left-40 z-20 top-28 absolute "
+          ></motion.div>
 
-          <div className="z-10 lg:block hidden">
+          <motion.div
+            initial={{ x: -300, y: 300, opacity: 0 }}
+            whileInView={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="z-10 lg:block hidden"
+          >
             <div className="bg-black rounded-xl w-56 mb-60 ">
               <img src="/assets/raouf.png" className="rounded-xl" alt="" />
             </div>
-          </div>
-          <div className=" lg:z-10">
+          </motion.div>
+          <motion.div
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className=" lg:z-10"
+          >
             <h3 className="text-primary text-2xl mb-5 font-semibold">
               About Me
             </h3>
@@ -201,7 +235,7 @@ const Home = () => {
                 alt="download icon"
               />
             </button>
-          </div>
+          </motion.div>
         </section>
 
         {/* ***************************************************************** Skills SECTION ********************************************************************** */}
@@ -219,7 +253,11 @@ const Home = () => {
           "
           ></div>
 
-          <div>
+          <motion.div
+            initial={{ x: -300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <h3 className=" text-2xl mb-5 font-semibold">My Skills</h3>
             <br />
             <h2 className=" text-5xl navbar-font font-medium">
@@ -234,7 +272,7 @@ const Home = () => {
               projects in diverse industries and have successfully increased my
               coding abilities and problem-solving skills.
             </p>
-          </div>
+          </motion.div>
 
           <Skills />
         </section>
@@ -280,10 +318,46 @@ const Home = () => {
           <div>
             <h3 className=" text-4xl navbar-font text-center">My Resume</h3>
             <div className="flex gap-20 items-center mt-10 flex-col lg:flex-row">
-              <div className="lg:self-start lg:mt-5">
+              <motion.div
+                initial={{ x: -300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="lg:self-start lg:mt-5"
+              >
                 <div className=" flex items-center gap-3">
                   <hr className="h-1-2 bg-secondary w-5 border-0" />
                   <h4 className="text-2xl navbar-font">Experience</h4>
+                </div>
+                <div className="flex sm:gap-5 gap-2 my-8">
+                  <img
+                    src="/assets/education2.svg"
+                    className="self-start mt-2"
+                    alt="icon"
+                  />
+                  <div className="">
+                    <div className="flex justify-between">
+                      <h4 className="sm:text-2xl text-xl navbar-font">
+                        Dev member
+                      </h4>
+                      <h5>2022 - present</h5>
+                    </div>
+                    <div className="md:w-[31.6rem] w-[17rem]">
+                      <p className=" font-extralight opacity-60 flex-col">
+                        Micro club - University of Science and Technology Houari
+                        Boumediene
+                      </p>
+
+                      <p className="font-extralight opacity-100 mt-3">
+                        As a developer member i was part of a team that worked
+                        on a website for a hackathon called 'MGV'. The purpose
+                        of the website was to provide all the necessary
+                        information and resources related to the hackathon. I
+                        used Next.js and Typescript to build the website, and I
+                        also learned and utilized framer motion for some
+                        additional features.
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex sm:gap-5 gap-2 my-8">
                   <img
@@ -313,8 +387,13 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="lg:self-start lg:mt-5">
+              </motion.div>
+              <motion.div
+                initial={{ x: 300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="lg:self-start lg:mt-5"
+              >
                 <div className=" flex items-center gap-3">
                   <hr className="h-1-2 bg-secondary w-5 border-0" />
                   <h4 className="sm:text-2xl text-xl navbar-font">Education</h4>
@@ -377,7 +456,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -397,7 +476,11 @@ const Home = () => {
               Contact Me
             </h3>
             <div className=" flex lg:gap-56 gap-10 flex-col lg:flex-row">
-              <div>
+              <motion.div
+                initial={{ x: -300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 <h4 className=" text-xl lg:block hidden">
                   Please fill out the form on this section <br /> to contact me.
                 </h4>
@@ -421,8 +504,13 @@ const Home = () => {
                     </h4>
                   </div>
                 </div>
-              </div>
-              <div className="flex-grow">
+              </motion.div>
+              <motion.div
+                initial={{ x: 300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex-grow"
+              >
                 <form
                   className="flex flex-col gap-5 text-black md:w-96 md:h-96"
                   ref={form}
@@ -460,7 +548,7 @@ const Home = () => {
                   </button>
                 </form>
                 <ToastContainer />
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
