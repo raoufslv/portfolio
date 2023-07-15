@@ -4,7 +4,6 @@ import projects from "../settings/projects.js";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-
 const ProjectDetails = () => {
   const { id } = useParams();
   const project = projects[id];
@@ -53,9 +52,12 @@ const ProjectDetails = () => {
             transition duration-200 ease-in-out cursor-pointer"
             >
               <a
-              onMouseEnter={() => setAboutHovered(true)}
-              onMouseLeave={() => setAboutHovered(false)}
-              href={project.link} target="_blank" rel="noreferrer">
+                onMouseEnter={() => setAboutHovered(true)}
+                onMouseLeave={() => setAboutHovered(false)}
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 see Live demo 🡥
                 <motion.div
                   initial={{ scaleX: 0, originX: 0.5 }}
@@ -114,7 +116,9 @@ const ProjectDetails = () => {
             <h2 className=" text-white text-4xl text-center py-5">{key}</h2>
             <img
               src={project.images[key]}
-              className=" py-10 lg:px-60 w-full"
+              className={`py-10 lg:px-60  m-auto  ${
+                key.includes("Mobile") ? " w-1/2" : "w-full"
+              }`}
               alt=""
             />
           </section>

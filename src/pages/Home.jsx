@@ -281,7 +281,7 @@ const Home = () => {
 
         <section
           id="Projects"
-          className=" w-screen h-auto min-h-screen bg-secondary relative p-5 lg:px-20"
+          className=" w-screen h-auto min-h-screen bg-secondary relative p-5 pb-20 lg:px-20"
         >
           {/* boxes */}
           <div className="bg-primary-transparent box rounded absolute bottom-0 right-0  lg:block hidden"></div>
