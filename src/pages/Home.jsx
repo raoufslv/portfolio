@@ -330,7 +330,7 @@ const Home = () => {
                 </div>
                 <div className="flex sm:gap-5 gap-2 my-8">
                   <img
-                    src="/assets/education2.svg"
+                    src="/assets/work-icon.svg"
                     className="self-start mt-2"
                     alt="icon"
                   />
@@ -348,41 +348,47 @@ const Home = () => {
                       </p>
 
                       <p className="font-extralight opacity-100 mt-3">
-                        As a developer member i was part of a team that worked
-                        on a website for a hackathon called 'MGV'. The purpose
-                        of the website was to provide all the necessary
-                        information and resources related to the hackathon. I
-                        used Next.js and Typescript to build the website, and I
-                        also learned and utilized framer motion for some
-                        additional features.
+                        In my role as a developer in the scientific club 'Micro
+                        club,' I was fortunate enough to contribute to the
+                        creation of a website for the 'MGV' hackathon. The
+                        primary objective of this website was to serve as a
+                        comprehensive platform offering essential information
+                        and resources pertaining to the hackathon. To develop
+                        the website, I utilized Next.js and Typescript, while
+                        incorporating framer motion to enhance certain features.
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="flex sm:gap-5 gap-2 my-8">
                   <img
-                    src="/assets/education2.svg"
+                    src="/assets/work-icon.svg"
                     className="self-start mt-2"
                     alt="icon"
                   />
                   <div className="">
                     <div className="flex justify-between">
                       <h4 className="sm:text-2xl text-xl navbar-font">
-                        Training Camp
+                        Dev participant
                       </h4>
-                      <h5>December 2022</h5>
+                      <h5>2022 - 2023</h5>
                     </div>
                     <div className="md:w-[31.6rem] w-[17rem]">
                       <p className=" font-extralight opacity-60 flex-col">
-                        Etic club - Ecole supérieure d'informatique
+                        Hackathons - USTHB & ESI ...
                       </p>
 
                       <p className="font-extralight opacity-100 mt-3">
-                        I worked on a project to "create a web application
-                        allowing Algerians to submit their automobile sale
-                        announcement and consult those published by other users"
-                        at the 9th edition of the training camp held by the ETIC
-                        club.
+                        Participating in hackathons as a web developer and
+                        designer was a game-changer. I got to show off my skills
+                        in creating websites, solving problems, and
+                        collaborating with others. Working under pressure, I
+                        quickly adapted, came up with creative ideas, and
+                        communicated well with my team. Using the latest
+                        technologies, I built visually attractive and functional
+                        web experiences. Hackathons pushed me to grow, fostering
+                        teamwork and a passion for constant learning in my
+                        field.
                       </p>
                     </div>
                   </div>
