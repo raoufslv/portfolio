@@ -27,10 +27,10 @@ export default function Listicons({ selected }) {
               src={icon}
               className="w-20 cursor-pointer"
               alt="icon"
-              initial={{ x: 300, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              exit={{ x: 100, opacity: 0 }}
-              transition={{ duration: 0.4 }}
+              initial={{ scale: 0.2, opacity: 0.2 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.2, opacity: 0.2 }}
+              transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             />

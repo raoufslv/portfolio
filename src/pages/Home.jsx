@@ -77,7 +77,7 @@ const Home = () => {
   // declare 2 variables de type boolean
   const [AboutHovered, setAboutHovered] = useState(false);
   return (
-    <div className="text-white">
+    <div className="text-white w-screen overflow-hidden">
       <Navbar />
       <div>
         {/* ***************************************************************** HOME SECTION ********************************************************************** */}
