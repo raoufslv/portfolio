@@ -193,8 +193,8 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             className="z-10 lg:block hidden"
           >
-            <div className="bg-black rounded-xl w-56 mb-60 ">
-              <img src="/assets/raouf.png" className="rounded-xl" alt="" />
+            <div className="bg-black rounded-xl w-56 mb-60">
+              <img src="/assets/raouf.png" className="rounded-xl" alt=""/>
             </div>
           </motion.div>
           <motion.div
@@ -242,7 +242,7 @@ const Home = () => {
 
         <section
           id="Skills"
-          className=" w-screen h-auto min-h-screen py-32 bg-primary relative flex flex-col lg:flex-row justify-center lg:gap-72 items-center px-5 lg:px-44"
+          className=" w-screen h-auto min-h-screen py-32 bg-primary relative flex flex-col lg:flex-row justify-center 2xl:gap-80 lg:gap-56 items-center px-5 lg:px-44"
         >
           <div className="bg-secondary-transparent box opacity-80 rounded absolute bottom-0 left-0  lg:block hidden"></div>
           <div className="bg-secondary-transparent box rounded absolute bottom-10 left-10  lg:block hidden"></div>
@@ -500,7 +500,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="my-5 mt-10 flex gap-5 items-center">
-                  <img src="/assets/message.svg" alt="" />
+                  <img src="/assets/message.svg" className=" z-50" alt="" />
                   <div>
                     <h4 className=" text-xl">Email me</h4>
                     <h4 className="text-primary font-bold md:text-xl sm:text-lg">

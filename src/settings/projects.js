@@ -1,4 +1,40 @@
 export const projects = [
+
+  {
+    title: "MGV",
+    description:
+      "An innovative hackathon showcase website thoughtfully constructed with Next.js, Tailwind CSS, and Framer Motion.",
+    image: "/assets/MGV.png",
+    logo: "/assets/MGV-logo.png",
+    bg: "bg-white text-purple-800",
+    link: "https://mgv.microclub.tech/",
+    technologies: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+    ],
+    features: [
+      "landing page with framer motion animations",
+      "light and dark mode",
+      "responsive design",
+      "agenda cards with animations",
+    ],
+    images: {
+      "Hero section (light)": "/assets/MGV pics/home-light.png",
+      "Hero section (dark)": "/assets/MGV pics/home-dark.png",
+      "Introduction section (light)": "/assets/MGV pics/Intro-light.png",
+      "Introduction section (dark)": "/assets/MGV pics/Intro-dark.png",
+      "Agenda section (light)": "/assets/MGV pics/Agenda-light.png",
+      "Agenda section (dark)": "/assets/MGV pics/Agenda-dark.png",
+      "Cards (light)": "/assets/MGV pics/Card-light.png",
+      "Cards (dark)": "/assets/MGV pics/Card-dark.png",
+      "Questions section (light)": "/assets/MGV pics/question-light.png",
+      "Questions section (dark)": "/assets/MGV pics/question-dark.png",
+    },
+  },
+
   {
     title: "Ekri&Echri",
     description:
@@ -39,6 +75,7 @@ export const projects = [
       "Admin page": "/assets/EKRI&ECHRI pics/Admin.png",
     },
   },
+
   {
     title: "Tomobiltek",
     description:
@@ -69,6 +106,7 @@ export const projects = [
       "Information page": "/assets/Tomobiltek pics/Mes info.png",
     },
   },
+
   {
     title: "AI Article",
     description:
@@ -96,6 +134,7 @@ export const projects = [
       "Computer vision page": "/assets/AI pics/ComputerVision.png",
     },
   },
+
   {
     title: "SheTalks",
     description:
