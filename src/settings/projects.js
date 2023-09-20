@@ -1,5 +1,4 @@
 export const projects = [
-
   {
     title: "MGV",
     description:
@@ -77,6 +76,61 @@ export const projects = [
   },
 
   {
+    title: "Alado shop",
+    description:
+      "An E-commerce website selling accessories, crafted using the Ecwid platform.",
+    image: "/assets/Aladoshop pics/aladoshop.png",
+    logo: "/assets/Aladoshop pics/logo.png",
+    bg: "bg-white text-orange-400",
+    link: "https://alado-shop.company.site/",
+    technologies: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
+    ],
+    features: [
+      "Shopping Cart Integration: Seamlessly add products to your cart and complete your purchases with ease.",
+      "User Account Management: Create and manage your own account for a personalized shopping experience.",
+      "Advanced Filtering: Easily find the accessories you're looking for with robust search and filtering options.",
+      "Responsive Design: Enjoy a seamless shopping experience on any device, thanks to the website's responsive design.",
+      "Fast and Efficient: Experience swift load times and smooth navigation, ensuring a speedy and enjoyable shopping journey.",
+    ],
+    images: {
+      "Home page": "/assets/Aladoshop pics/home.png",
+    },
+  },
+
+  {
+    title: "SheTalks",
+    description:
+      "A web app for women, to help those in need and bring them together in a safe and secure place, built with MERN stack.",
+    image: "/assets/SheTalks.png",
+    logo: "/assets/SheTalksLogo.svg",
+    bg: "bg-gradient-to-tr from-red-400 via-red-200 to-blue-400 text-red-500",
+    link: "https://github.com/raoufslv/SheTalks-IWD-23",
+    technologies: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    ],
+    features: [
+      "Sign in / Log in pages",
+      "Add, like and view posts",
+      "Search for ads by category or by typing.",
+    ],
+    images: {
+      "Home Page": "/assets/SheTalks pics/homePage.png",
+      "Sign in": "/assets/SheTalks pics/SignupPage.png",
+      "Log in": "/assets/SheTalks pics/LoginPage.png",
+      "Posts page": "/assets/SheTalks pics/postsPage.png",
+      "post page": "/assets/SheTalks pics/posterPage.png",
+    },
+  },
+
+  {
     title: "Tomobiltek",
     description:
       "A web application allowing users to post ads for cars, built with HTML, CSS with Tailwind and React.",
@@ -136,38 +190,6 @@ export const projects = [
   },
 
   {
-    title: "SheTalks",
-    description:
-      "A web app for women, to help those in need and bring them together in a safe and secure place, built with MERN stack.",
-    image: "/assets/SheTalks.png",
-    logo: "/assets/SheTalksLogo.svg",
-    bg: "bg-gradient-to-tr from-red-400 via-red-200 to-blue-400 text-red-500",
-    link: "https://github.com/raoufslv/SheTalks-IWD-23",
-    technologies: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    ],
-    features: [
-      "Sign in / Log in pages",
-      "Add, like and view posts",
-      "Search for ads by category or by typing.",
-    ],
-    images: {
-      "Home Page": "/assets/SheTalks pics/homePage.png",
-      "Sign in": "/assets/SheTalks pics/SignupPage.png",
-      "Log in": "/assets/SheTalks pics/LoginPage.png",
-      "Posts page": "/assets/SheTalks pics/postsPage.png",
-      "post page": "/assets/SheTalks pics/posterPage.png",
-    },
-  },
-
-  {
     title: "Bk Fire",
     description:
       "A company security platform design, to help businesses effectively manage their security needs, designed with Figma.",
@@ -187,18 +209,22 @@ export const projects = [
       "Home Page Desktop": "/assets/BkFire pics/HomePageDesktop.png",
       "Log in Desktop": "/assets/BkFire pics/LoginPageDesktop.png",
       "Cameras Page Desktop": "/assets/BkFire pics/CamerasPageDesktop.png",
-      "Notification Page Desktop": "/assets/BkFire pics/NotificationPageDesktop.png",
+      "Notification Page Desktop":
+        "/assets/BkFire pics/NotificationPageDesktop.png",
       "Settings Page Desktop": "/assets/BkFire pics/SettingsPageDesktop.png",
       "Robot Page Desktop": "/assets/BkFire pics/RobotPageDesktop.png",
-      "Architectural Page Desktop": "/assets/BkFire pics/ArchitecturalPageDesktop.png",
+      "Architectural Page Desktop":
+        "/assets/BkFire pics/ArchitecturalPageDesktop.png",
       "Home Page Mobile": "/assets/BkFire pics/HomePageMobile.png",
       "Log in Mobile": "/assets/BkFire pics/LoginPageMobile.png",
       "Menu in Mobile": "/assets/BkFire pics/NavbarPageMobile.png",
       "Cameras Page Mobile": "/assets/BkFire pics/CamerasPageMobile.png",
-      "Notification Page Mobile": "/assets/BkFire pics/NotificationPageMobile.png",
+      "Notification Page Mobile":
+        "/assets/BkFire pics/NotificationPageMobile.png",
       "Settings Page Mobile": "/assets/BkFire pics/SettingsPageMobile.png",
       "Robot Page Mobile": "/assets/BkFire pics/RobotPageMobile.png",
-      "Architectural Page Mobile": "/assets/BkFire pics/ArchitecturalPageMobile.png",
+      "Architectural Page Mobile":
+        "/assets/BkFire pics/ArchitecturalPageMobile.png",
     },
   },
 ];
