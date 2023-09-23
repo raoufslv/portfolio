@@ -57,7 +57,7 @@ const Home = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/assets/cv2.pdf"; // Replace with the desired file path
+    link.href = "/assets/CV.pdf"; // Replace with the desired file path
     link.download = "CV.pdf"; // Replace with the desired name of the downloaded file
     link.target = "_blank";
     document.body.appendChild(link);
@@ -194,7 +194,7 @@ const Home = () => {
             className="z-10 lg:block hidden"
           >
             <div className="bg-black rounded-xl w-56 mb-60">
-              <img src="/assets/raouf.png" className="rounded-xl" alt=""/>
+              <img src="/assets/raouf.png" className="rounded-xl" alt="" />
             </div>
           </motion.div>
           <motion.div
@@ -219,7 +219,7 @@ const Home = () => {
               Based in Algiers, Algeria
             </h3>
             <p className=" md:w-96  mt-8 text-lg">
-              I'm a Fullstack web developer with 2 year of experience in
+              I'm a Fullstack web developer with +3 years of experience in
               designing and building responsive web apps. Proficient in CSS,
               React Js as well as a good experience in Backend with PHP,Nodejs
               and expressjs,and also Nextjs with knowledge of UI, UX.
@@ -339,7 +339,7 @@ const Home = () => {
                       <h4 className="sm:text-2xl text-xl navbar-font">
                         Dev member
                       </h4>
-                      <h5>2022 - present</h5>
+                      <h5>2020 - present</h5>
                     </div>
                     <div className="md:w-[31.6rem] w-[17rem]">
                       <p className=" font-extralight opacity-60 flex-col">
@@ -348,14 +348,45 @@ const Home = () => {
                       </p>
 
                       <p className="font-extralight opacity-100 mt-3">
-                        In my role as a developer in the scientific club 'Micro
-                        club,' I was fortunate enough to contribute to the
-                        creation of a website for the 'MGV' hackathon. The
-                        primary objective of this website was to serve as a
-                        comprehensive platform offering essential information
-                        and resources pertaining to the hackathon. To develop
-                        the website, I utilized Next.js and Typescript, while
-                        incorporating framer motion to enhance certain features.
+                        In my role as a developer in the 'Micro Club,' I've
+                        gained valuable experience in computer science and web
+                        development. One standout project involved creating a
+                        website for the 'MGV' hackathon using Next.js,
+                        Typescript, and framer motion. Additionally, my club
+                        involvement has enhanced my soft skills, including
+                        teamwork and communication, through collaboration with
+                        fellow members on various projects.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex sm:gap-5 gap-2 my-8">
+                  <img
+                    src="/assets/work-icon.svg"
+                    className="self-start mt-2"
+                    alt="icon"
+                  />
+                  <div className="">
+                    <div className="flex justify-between">
+                      <h4 className="sm:text-2xl text-xl navbar-font">
+                        Freelancer web developer
+                      </h4>
+                      <h5>2022 - present</h5>
+                    </div>
+                    <div className="md:w-[31.6rem] w-[17rem]">
+                      <p className=" font-extralight opacity-60 flex-col">
+                        Customers researched
+                      </p>
+
+                      <p className="font-extralight opacity-100 mt-3">
+                        Throughout my freelancing adventures, I've had the
+                        chance to work on a variety of web development projects.
+                        During this time, I've taken the initiative to learn and
+                        experiment with new web technologies to keep up with the
+                        ever-changing trends in the field. This independent
+                        journey has been both exciting and rewarding, helping me
+                        grow my skill set and stay up-to-date in the dynamic
+                        world of web development.
                       </p>
                     </div>
                   </div>
@@ -371,7 +402,7 @@ const Home = () => {
                       <h4 className="sm:text-2xl text-xl navbar-font">
                         Dev participant
                       </h4>
-                      <h5>2022 - 2023</h5>
+                      <h5>2022 - present</h5>
                     </div>
                     <div className="md:w-[31.6rem] w-[17rem]">
                       <p className=" font-extralight opacity-60 flex-col">
