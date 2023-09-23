@@ -12,6 +12,7 @@ export const icons = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
 
   ],
   Programmation: [
